@@ -2,6 +2,8 @@
     --color-green: rgb(28, 231, 131);
     --color-gray: rgb(168, 175, 189);
     --color-white: rgb(255, 255, 255);
+    --color-white-6: rgba(255, 255, 255, 0.6);
+    --color-background-black: rgb(11, 12, 15);
     --font: 'Montserrat', sans-serif;
     --letter-spacing-6: 0.6px;
     --button-border-radius: 4px;
@@ -32,7 +34,9 @@ header a {
 header img:hover,
 header a:hover,
 #get_both:hover,
-.inner_footer_buttons button:hover {
+.inner_footer_buttons button:hover,
+.recommendations_inner_bottom a:hover,
+#arrow-down:hover {
     cursor: pointer;
 }
 
@@ -73,7 +77,9 @@ header a:hover,
 }
 
 .inner_top h4:first-child,
-.inner_footer h4:first-child {
+.inner_footer h4:first-child,
+#recommendations h4,
+.recommendations_inner_bottom h4 {
     color: var(--color-green);
     margin-bottom: 17px;
     font-size: 12px;
@@ -82,7 +88,9 @@ header a:hover,
 }
 
 .inner_top h4:not(:first-child),
-.inner_footer h4:not(:first-child) {
+.inner_footer h4:not(:first-child),
+#recommendations h2,
+.recommendations_inner_bottom h2 {
     color: var(--color-white);
     margin-top: 16px;
     font-weight: 500;
@@ -170,4 +178,86 @@ header a:hover,
     color: #FFFFFF;
     opacity: 0.7;
     font-size: 10px;
+}
+
+#recommendations {
+    width: 100vw;
+    padding: 90px 200px;
+    background-color: var(--color-background-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#recommendations h4, 
+.recommendations_inner_bottom h4 {
+    font-size: 14px;
+}
+#recommendations h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 36px;
+}
+
+#recommendations p.exclusive {
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#recommendations p.premium {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.46;
+    width: 100%;
+    text-align: end;
+}
+
+.recommendations_inner_bottom { 
+    margin-top: 160px;
+    position: relative;
+}
+
+.recommendations_inner_bottom h3 {
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.32;
+    margin-top: 26px;
+    margin-bottom: 8px;
+}
+
+.recommendations_inner_bottom p.restrictions {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.46;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    color: var(--color-white-6);
+}
+
+.recommendations_inner_bottom a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    line-height: 1;
+    text-transform: uppercase;
+    border-bottom: 1px solid #FFFFFF;
+    color: var(--color-white);
+}
+
+.recommendations_inner_bottom a i {
+    margin-left: 20px;
+}
+
+#arrow-down {
+    display: block;
+    margin-top: 40px;
+    animation: bounce 2s linear infinite;
+    position: relative;
 }
