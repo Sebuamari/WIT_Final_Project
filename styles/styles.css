@@ -48,7 +48,7 @@ header a:hover,
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    background-image: url("/images/streaming.jpeg");
+    background-image: url("../images/streaming.jpeg");
     font-family: var(--font)
 }
 
