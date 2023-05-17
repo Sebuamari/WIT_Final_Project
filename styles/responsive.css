@@ -1,0 +1,7 @@
+@media (max-width: 800px) {
+    .inner_footer,
+    .inner_footer .inner_footer_left {
+        flex-direction: column;
+        margin: 0;
+    }
+}
