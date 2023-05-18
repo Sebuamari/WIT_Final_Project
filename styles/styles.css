@@ -9,8 +9,12 @@
     --button-border-radius: 4px;
 }
 
+section {
+    font-family: var(--font);
+}
+
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
@@ -36,7 +40,10 @@ header a:hover,
 #get_both:hover,
 .inner_footer_buttons button:hover,
 .recommendations_inner_bottom a:hover,
-#arrow-down:hover {
+#arrow-down:hover,
+.movie-tile:hover,
+#arrow-left:hover,
+#arrow-right:hover {
     cursor: pointer;
 }
 
@@ -53,7 +60,6 @@ header a:hover,
     align-items: center;
     text-align: center;
     background-image: url("../images/streaming.jpeg");
-    font-family: var(--font)
 }
 
 #top_section::before {
@@ -82,6 +88,7 @@ header a:hover,
 .recommendations_inner_bottom h4 {
     color: var(--color-green);
     margin-bottom: 17px;
+    text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: var(--letter-spacing-6);
@@ -156,6 +163,10 @@ header a:hover,
     height: 75px;
 }
 
+.inner_footer_left .align_left {
+    text-align: start;
+}
+
 .inner_footer_buttons {
     display: flex;
     flex-direction: column;
@@ -213,7 +224,9 @@ header a:hover,
     font-weight: 400;
     line-height: 1.46;
     width: 100%;
+    color: var(--color-white);
     text-align: end;
+    margin-top: 10px;
 }
 
 .recommendations_inner_bottom { 
@@ -260,4 +273,93 @@ header a:hover,
     margin-top: 40px;
     animation: bounce 2s linear infinite;
     position: relative;
+}
+
+.swiper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+    width: 100%;
+}
+
+#arrow-left,
+#arrow-right {
+    display: none;
+    z-index: 1;
+}
+
+.swiper.active #arrow-left,
+.swiper.active #arrow-right {
+    display: block;
+    transform: rotate(90deg);
+}
+
+.swiper.active #arrow-right {
+    transform: rotate(-90deg);
+}
+
+.movies_container {
+    display: grid;
+    width: 100%;
+    min-height: 500px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-top: 50px;
+    column-gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper.active .movies_container {
+    grid-template-columns: repeat(10, 300px);
+    column-gap: 30px;
+    grid-template-rows: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.movie-tile {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 0 0 300px; 
+}
+
+.movie-tile::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie_banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-tile h3,
+.movie-tile h4 {
+    text-align: start;
+    position: relative;
+    top: -95%;
+    padding-left: 30px;
+    z-index: 2;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.24;
+    color: var(--color-white) !important;
+}
+
+.movie-tile h4 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.36;
 }

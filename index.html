@@ -33,7 +33,7 @@
                 <div class="inner_footer_left">
                     <img src="./images/hulu-disney-espn.png" alt="hulu, disney and espn logo">
                     <div>
-                        <h4>Disney bundle duo basic</h4>
+                        <h4 class="align_left">Disney bundle duo basic</h4>
                         <h4>Get Hulu & Disney+, both with ads, for $9.99/month.</h4>
                     </div>
                 </div>
@@ -47,8 +47,11 @@
             <h4>INCLUDED IN ALL PLANS</h4>
             <h2>All The TV You Love</h2>
             <p class="exclusive">Watch full seasons of exclusively streaming series, current-season episodes, hit movies, Hulu Originals, kids shows, and more.</p>
-            <div class="movies_container">
-
+            <div class="swiper">
+                <i id="arrow-left" class="fa-solid fa-angle-down fa-2xl" style="color: #ffffff;"></i>
+                <div class="movies_container">
+                </div>
+                <i id="arrow-right" class="fa-solid fa-angle-down fa-2xl" style="color: #ffffff;"></i>
             </div>
             <p class="premium">Premium network add-ons available for an additional cost</p>
             <div class="recommendations_inner_bottom">
@@ -60,5 +63,7 @@
                 <i id="arrow-down" class="fa-solid fa-angle-down fa-2xl" style="color: #ffffff;"></i>
             </div>
         </section>
+        <script src="js/fetchMovies.js" defer></script>
+        <script src="js/slider.js" defer></script>
     </body>
 </html>

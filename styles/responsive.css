@@ -5,3 +5,11 @@
         margin: 0;
     }
 }
+
+@media (max-width: 1650px) {
+    .movies_container { 
+        grid-template-columns: repeat(2, 500px);
+        grid-template-rows: repeat(2, 700px);
+        row-gap: 30px;
+    }
+}
