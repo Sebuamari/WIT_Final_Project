@@ -13,3 +13,7 @@ slideButtonRight.addEventListener("click", () => {
   slideOffset += slideAmount;
   moviesContainer.style.transform = `translateX(-${slideOffset}px)`;
 });
+
+document.querySelector("#arrow-down").addEventListener("click", () => {
+  document.querySelector("#about_hulu").scrollIntoView({ behavior: 'smooth' })
+});
