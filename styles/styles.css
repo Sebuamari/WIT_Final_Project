@@ -3,6 +3,7 @@
     --color-gray: rgb(168, 175, 189);
     --color-white: rgb(255, 255, 255);
     --color-white-6: rgba(255, 255, 255, 0.6);
+    --color-white-4: rgba(255, 255, 255, 0.4);
     --color-background-black: rgb(11, 12, 15);
     --font: 'Montserrat', sans-serif;
     --letter-spacing-6: 0.6px;
@@ -43,7 +44,8 @@ header a:hover,
 #arrow-down:hover,
 .movie-tile:hover,
 #arrow-left:hover,
-#arrow-right:hover {
+#arrow-right:hover,
+.inner_header ul li:hover {
     cursor: pointer;
 }
 
@@ -362,4 +364,136 @@ header a:hover,
     font-weight: 500 !important;
     margin-bottom: 0 !important;
     line-height: 1.36;
+}
+
+#about_hulu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.inner_header {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 2;
+}
+
+.inner_header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.inner_header ul li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.125;
+    letter-spacing: 0.25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-white-4);
+}
+
+.inner_header .slide {
+    width: 81px;
+    height: 5px;
+    margin-top: 15px;
+    background-color: var(--color-white);
+    transition: linear 0.3s;
+}
+
+.inner_header ul li.active {
+    color: #c8c8c8;
+}
+
+#about_hulu img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: linear 0.3s;
+}
+
+#about_hulu .hide {
+    display: none !important;
+}
+
+#about_hulu .inner_section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20%;
+    top: calc((20% + 60px));
+    max-width: 450px;
+    color: var(--color-white);
+    animation: fadeFromBottom 0.5s ease-out;
+}
+
+.inner_section h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.inner_section p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.36;
+    letter-spacing: 0;
+    margin-top: 18px;
+}
+
+.inner_section p.bottom {
+    line-height: 1;
+    font-size: 9px;
+    hyphens: auto;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.inner_section p.bottom a {
+    color: hsla(0,0%,100%,.6);
+    text-decoration: none;
+    border-bottom: 1px solid hsla(0,0%,100%,.6);
+}
+
+.inner_section .logos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logos .logo_container {
+    background-color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+}
+
+.logo_container img {
+    width: auto !important;
+    height: 25px !important;
+    margin: 0 auto !important;
+}
+
+@keyframes fadeFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
