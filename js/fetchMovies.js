@@ -63,7 +63,6 @@ async function handleViewportChange() {
   const swiper = document.querySelector(".swiper");
   
   if (window.innerWidth < 1420) {
-    console.log(swiper.classList.contains("active"))
     if(!swiper.classList.contains("active")) {
         swiper.classList.add("active");
         await fetchData(10);
