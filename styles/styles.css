@@ -532,7 +532,7 @@ header a:hover,
 .plans_header.fixed {
     position: fixed;
     top: 0;
-    background-color: #000000;
+    background-color: var(--color-background-black);
 }
 
 .td_header {
