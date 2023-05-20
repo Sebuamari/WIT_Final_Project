@@ -45,7 +45,8 @@ header a:hover,
 .movie-tile:hover,
 #arrow-left:hover,
 #arrow-right:hover,
-.inner_header ul li:hover {
+.inner_header ul li:hover,
+.white_button:hover {
     cursor: pointer;
 }
 
@@ -487,13 +488,338 @@ header a:hover,
     margin: 0 auto !important;
 }
 
-@keyframes fadeFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    width: 100vw;
+    padding-top: 80px;
+    background-color: var(--color-background-black);
 }
+
+#plans h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+#plans h4 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.32;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.plans_header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 90%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--color-white);
+    border-top: 1px solid hsla(0,0%,78.4%,.4);
+    border-bottom: 1px solid hsla(0,0%,78.4%,.4);
+}
+
+.td_header {
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 1.4 !important;
+    letter-spacing: 0;
+}
+
+.plans_header.bundle {
+    grid-template-columns: 1fr 3fr;
+}
+
+.plans_header.bundle .choice_switcher {
+    flex-direction: column;
+}
+
+.plans_header.bundle .bundle_save_choice,
+.plans_header.bundle .base_plans_choice {
+    align-items: center;
+}
+
+.plans_header_base.active,
+.plans_header_bundle.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+
+.plans_header_bundle.active {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.plans_header_base,
+.plans_header_bundle {
+    display: none;
+}
+
+.plans_header .choice_switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 32px 0;
+}
+
+.plans_header_bundle {
+    display: none;
+}
+
+.plans_header .base_plans_choice,
+.plans_header .bundle_save_choice {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.base_plans_choice img {
+    height: 25px;
+    width: auto;
+}
+
+.bundle_save_choice img {
+    width: 161px;
+    height: auto;
+}
+
+.hulu_with_ads,
+.trio_basic,
+.trio_premium,
+.hulu_live {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: rgb(39, 44, 52);
+    padding: 32px 8px;
+} 
+
+.trio_premium,
+.hulu_live {
+    background-color: unset;
+}
+
+.hulu_with_ads h5 {
+    border-radius: 100px;
+    color: #16181d;
+    letter-spacing: 1px;
+    background: #1ce783;
+    font-size: 9px;
+    padding: 7px 15px 5px;
+}
+
+.hulu_with_ads p,
+.hulu_without_ads p {
+    padding-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1;
+    font-size: 14px;
+    color: #bec0c2;
+}
+
+.hulu_with_ads p span,
+.hulu_without_ads p span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.32;
+    letter-spacing: 0;
+    color: var(--color-white);
+}
+
+.white_button {
+    margin: 6px auto 0;
+    color: #000000;
+    width: 250px;
+    border-radius: 4px;
+    height: 50px;
+    border: none;
+    background-color: var(--color-white);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.trio_basic .white_button,
+.trio_premium .white_button, 
+.hulu_live .white_button {
+    width: 150px;
+}
+
+.hulu_without_ads {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    height: 100%;
+    padding: 32px 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  bottom: -1px;
+  background-color: var(--color-white);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1ce783;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.trio_basic img,
+.trio_premium img, 
+.hulu_live img {
+    width: 83px;
+    height: 24px;
+}
+
+.base_plans table,
+.bundle_plans table {
+    width: 90vw;
+}
+
+table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid hsla(0,0%,78.4%,.4);
+}
+
+.bundle_plans table tr td p {
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.36 !important;
+    letter-spacing: 0;
+}
+
+.bundle_plans table tr {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+table tr td,
+table tr td p {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+table tr td:not(:first-child) {
+    justify-content: center;
+}
+
+.bundle_plans table tr td p {
+    text-align: center !important;
+}
+
+table tr td:not(:first-child) {
+    text-align: center;
+}
+
+table tr td:nth-child(2) {
+    background-color: #272c34;
+}
+
+#plans p {
+    display: inline-block;
+    line-height: 1;
+    font-size: 9px;
+    hyphens: auto;
+    color: var(--color-white);
+}
+
+#plans p:first-child {
+    margin-top: 20px;
+}
+
+#plans p span {
+    color: #176ee1;
+}
+
+.base_plans,
+.bundle_plans {
+    display: none;
+}
+
+.base_plans.active,
+.bundle_plans.active {
+    display: flex;
+}
+
+.crossed {
+    display: block;
+    text-decoration: line-through;
+    color: #C5CAD3 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.44;
+    letter-spacing: 0;
+}
+
+.plans_footer_paragraph {
+    width: 90vw;
+}
+
