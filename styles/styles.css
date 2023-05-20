@@ -529,6 +529,12 @@ header a:hover,
     border-bottom: 1px solid hsla(0,0%,78.4%,.4);
 }
 
+.plans_header.fixed {
+    position: fixed;
+    top: 0;
+    background-color: #000000;
+}
+
 .td_header {
     font-size: 14px !important;
     font-weight: 500;
