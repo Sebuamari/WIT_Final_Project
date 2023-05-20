@@ -6,6 +6,23 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .white_button {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .plans_header .choice_switcher {
+        flex-direction: column;
+    }
+
+    .base_plans_choice,
+    .bundle_save_choice {
+        align-items: center !important;
+    }
+}
+
 @media (max-width: 1650px) {
     .movies_container { 
         grid-template-columns: repeat(2, 500px);

@@ -570,6 +570,7 @@ header a:hover,
 .plans_header .choice_switcher {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 32px 0;
@@ -630,7 +631,7 @@ header a:hover,
     margin-bottom: 5px;
     line-height: 1;
     font-size: 14px;
-    color: #bec0c2;
+    color: #bec0c2 !important;
 }
 
 .hulu_with_ads p span,
@@ -639,7 +640,7 @@ header a:hover,
     font-weight: 600;
     line-height: 1.32;
     letter-spacing: 0;
-    color: var(--color-white);
+    color: var(--color-white) !important;
 }
 
 .white_button {
@@ -764,7 +765,7 @@ table tr td,
 table tr td p {
     display: flex;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px 10px;
 }
 
 table tr td:not(:first-child) {
