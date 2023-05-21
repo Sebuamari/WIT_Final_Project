@@ -6,9 +6,11 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .white_button {
-        width: 150px;
+@media (max-width: 1000px) {
+    footer .navigations {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 8px;
     }
 }
 
@@ -20,6 +22,10 @@
     .base_plans_choice,
     .bundle_save_choice {
         align-items: center !important;
+    }
+
+    .white_button {
+        width: 150px;
     }
 }
 
