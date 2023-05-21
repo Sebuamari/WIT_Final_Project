@@ -47,7 +47,8 @@ header a:hover,
 #arrow-left:hover,
 #arrow-right:hover,
 .inner_header ul li:hover,
-.white_button:hover {
+.white_button:hover,
+.adds_on_button:hover {
     cursor: pointer;
 }
 
@@ -829,6 +830,61 @@ table tr td:nth-child(2) {
 
 .plans_footer_paragraph {
     width: 90vw;
+    margin-bottom: 60px;
+}
+
+.adds_on {
+    display: block;
+    width: 90vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.adds_on.shown {
+    max-height: 1000px;
+}
+
+.adds_on table {
+    width: 100%;
+}
+
+.adds_on h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    margin-top: 56px;
+    margin-bottom: 12px;
+}
+
+.adds_on p {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+    margin-bottom: 18px;
+}
+
+.adds_on_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid hsla(0,0%,78.4%,.4);
+    border-top: 1px solid hsla(0,0%,78.4%,.4);
+    height: 70px;
+    width: 90vw;
+    margin: 0 0 40px 0;
+}
+
+.adds_on_button i {
+    transition: linear 0.3s;
+}
+
+.adds_on_button i.transformed {
+    transform: rotateX(180deg);
 }
 
 footer {
