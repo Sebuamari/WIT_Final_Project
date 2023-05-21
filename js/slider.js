@@ -7,17 +7,12 @@ const plansHeaderBundle = document.querySelector(".plans_header_bundle");
 const plansBase = document.querySelector(".base_plans");
 const plansBundle = document.querySelector(".bundle_plans");
 
-let slideOffset = 0;
-const slideAmount = 300;
-
 slideButtonLeft.addEventListener("click", () => {
-  slideOffset -= slideAmount;
-  moviesContainer.style.transform = `translateX(-${slideOffset}px)`;
+  moviesContainer.scrollLeft -= 150;
 });
 
 slideButtonRight.addEventListener("click", () => {
-  slideOffset += slideAmount;
-  moviesContainer.style.transform = `translateX(-${slideOffset}px)`;
+  moviesContainer.scrollLeft += 150;
 });
 
 document.querySelector("#arrow-down").addEventListener("click", () => {
