@@ -1,3 +1,65 @@
+@media (max-width: 770px) {
+    footer {
+        padding: 0 30px;
+    }
+
+    footer .navigations {
+        grid-template-rows: unset !important;
+    }
+
+    .help_and_about_us {
+        display: flex !important;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .navigations h3 {
+        margin: 0;
+    }
+
+    .browse,
+    .help,
+    .about_us {
+        border-bottom: 1px solid #d9dce2;
+        padding: 32px 0;
+    }
+
+    #browse_arrow,
+    #help_arrow,
+    #about_us_arrow {
+        display: inline-block;
+    }
+
+    #browse_arrow.transformed,
+    #help_arrow.transformed,
+    #about_us_arrow.transformed {
+        transform: rotateX(180deg);
+    }
+
+    .links,
+    .help_links,
+    .about_us_links {
+        display: flex !important;
+        flex-direction: column;
+        gap: 16px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+
+    .help_links,
+    .about_us_links {
+        gap: unset;
+    }
+
+    .links.shown,
+    .help_links.shown,
+    .about_us_links.shown {
+        margin-top: 32px;
+        max-height: 1000px;
+    }
+}
+
 @media (max-width: 800px) {
     .inner_footer,
     .inner_footer .inner_footer_left {

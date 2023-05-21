@@ -48,7 +48,10 @@ header a:hover,
 #arrow-right:hover,
 .inner_header ul li:hover,
 .white_button:hover,
-.adds_on_button:hover {
+.adds_on_button:hover,
+.browse:hover,
+.help:hover,
+.about_us:hover {
     cursor: pointer;
 }
 
@@ -879,7 +882,10 @@ table tr td:nth-child(2) {
     margin: 0 0 40px 0;
 }
 
-.adds_on_button i {
+.adds_on_button i,
+#browse_arrow,
+#help_arrow,
+#about_us_arrow  {
     transition: linear 0.3s;
 }
 
@@ -902,6 +908,7 @@ footer .navigations {
     column-gap: 16px;
     padding: 46px 0;
 }
+
 .browse .links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -925,6 +932,9 @@ footer ul li a {
 }
 
 .navigations h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 12px;
     font-weight: 500;
     line-height: 1;
