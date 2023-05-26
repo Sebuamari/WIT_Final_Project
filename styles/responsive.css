@@ -83,6 +83,10 @@
     .footer_links {
         justify-content: center;
     }
+
+    #continue {
+        width: 90%;
+    }
 }
 
 @media (max-width: 800px) {

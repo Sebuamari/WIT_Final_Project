@@ -214,6 +214,7 @@ form .birthdate_selectors {
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
+    border-radius: 10px;
 }
 
 #continue:hover,
@@ -229,6 +230,7 @@ footer {
 
 .footer_links {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
