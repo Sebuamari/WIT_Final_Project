@@ -18,7 +18,20 @@
     <body>
         <header>
             <img src="./images/hulu.png" alt="hulu  logo">
-            <a href="./login.html">Log in</a>
+            <button type="button" class="burger-button centered">
+                <span class="burger-button-lines">
+                    <span class="burger-button-line"></span>
+                    <span class="burger-button-line"></span>
+                </span>
+            </button>
+            <div class="mobile-menu hidden">
+                <a href="/"><img src="./images/hulu.png" alt="logo"></a>
+                <ul>
+                    <li><a href="/login.html">Log in</a></li>
+                    <li><a href="/register.html">Register</a></li>
+                </ul>
+            </div>
+            <a class="log_in" href="./login.html">Log in</a>
         </header>
         <section id="top_section">
             <div class="inner_top">
@@ -403,6 +416,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/burgerMenu.js" defer></script>
         <script src="js/fetchMovies.js" defer></script>
         <script src="js/slider.js" defer></script>
         <script src="js/headerSlider.js" defer></script>

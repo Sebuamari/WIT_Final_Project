@@ -11,6 +11,10 @@
     --button-border-radius: 4px;
 }
 
+body.no_scroll {
+    overflow: hidden;
+}
+
 section {
     font-family: var(--font);
 }
@@ -37,6 +41,129 @@ header a {
     text-transform: uppercase;
 }
 
+.burger-button {
+    display: none;
+    width: 35px;
+    height: 35px;
+    background: #000000;
+    border-radius: 32px;
+    border: none;
+    z-index: 2;
+}
+
+.burger-button-lines {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.burger-button-line {
+    width: 13px;
+    height: 3px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+.burger-button-line.crossed {
+    width: 16px;
+}
+
+.crossed:first-child {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 2px;
+}
+
+.crossed:last-child {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 1px;
+}
+
+.centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mobile-menu.hidden {
+    height: 0;
+    top: -500px;
+}
+
+.mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 100px;
+    background-color: var(--color-background-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.mobile-menu a {
+    margin-bottom: 200px;
+}
+
+.mobile-menu ul {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu ul a {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+    color: #000000;
+    margin-bottom: 200px;
+    text-transform: uppercase;
+}
+
+.burger-button:hover,
 header img:hover,
 header a:hover,
 #get_both:hover,
