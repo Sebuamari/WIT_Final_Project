@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hulu Login | Hulu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="hulu clone">
+        <link rel="icon" type="image/x-icon" href="../images/hulu.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/keyframes.css">
+        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
+    </head>
+    <body>
+        <header>
+            <a href="/">
+                <img src="../images/hulu.png" alt="logo">
+            </a>
+        </header>
+        
+        <div class="login_form_container">
+            <h2>Log In</h2>
+            <p>You will use this email and password to log into your accounts for all your favorite services across The Walt Disney Family of Companies, including Disney+, Hulu and ESPN+. <a href="/">Learn More</a></p>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <span id="error_email"><i class="fa-solid fa-circle-exclamation" style="color: #cc000d;"></i>error</span>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <span id="error_password"><i class="fa-solid fa-circle-exclamation" style="color: #cc000d;"></i>error</span><br><br>
+                <input id="submit" type="submit" value="Submit">
+              </form> 
+        </div>
+
+        <footer>
+            <ul class="footer_links">
+                <li><a href="/">About Ads</a></li>
+                <li><a href="/">Terms of Use</a></li>
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">© 2023  Hulu</a></li>
+            </ul>
+        </footer>
+        <script src="js/login.js" defer></script>
+    </body>
+</html>

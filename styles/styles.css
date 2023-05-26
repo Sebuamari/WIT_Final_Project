@@ -15,6 +15,18 @@ body.no_scroll {
     overflow: hidden;
 }
 
+.centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 section {
     font-family: var(--font);
 }
@@ -39,6 +51,13 @@ header img {
 header a {
     color: var(--color-gray);
     text-transform: uppercase;
+}
+
+.log_in {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 8px;
 }
 
 .burger-button {
@@ -94,18 +113,6 @@ header a {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     bottom: 1px;
-}
-
-.centered {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .mobile-menu.hidden {
@@ -180,6 +187,11 @@ header a:hover,
 .help:hover,
 .about_us:hover {
     cursor: pointer;
+}
+
+.log_in:hover {
+    background-color: #323843;
+    color: #FFFFFF;
 }
 
 #top_section {

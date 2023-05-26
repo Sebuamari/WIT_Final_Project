@@ -1,0 +1,133 @@
+:root {
+    --color-background-login: #f7f7f9;
+    --color-link: #1663dd;
+    --color-label: #636e85;
+    --color-error: #cc000d;
+    --color-green: rgb(28, 231, 131);
+    --color-gray: rgb(168, 175, 189);
+    --color-white: rgb(255, 255, 255);
+    --color-footer: rgb(246, 247, 248);
+    --color-white-6: rgba(255, 255, 255, 0.6);
+    --color-white-4: rgba(255, 255, 255, 0.4);
+    --color-background-black: rgb(11, 12, 15);
+    --font: 'Montserrat', sans-serif;
+    --letter-spacing-6: 0.6px;
+    --button-border-radius: 4px;
+}
+
+body {
+    background-color: var(--color-background-login);
+    font-family: var(--font);
+}
+
+header {
+    background-color: var(--color-white);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 24px;
+    width: auto;
+}
+
+.login_form_container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 450px;
+    padding: 40px 48px;
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.08);
+}
+
+.login_form_container h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 29px;
+}
+
+.login_form_container p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #636e85;
+    margin: 16px 0 32px;
+}
+
+.login_form_container p a {
+    color: var(--color-link);
+}
+
+form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    margin-top: 20px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: var(--color-label);
+}
+
+form input {
+    width: 100%;
+    height: 48px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: 1px solid #636e85;
+    border-radius: 4px;
+    outline: none;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.form input.error {
+    border-color: var(--color-error);
+}
+
+#error_email,
+#error_password {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-error);
+}
+
+#error_email.active,
+#error_password.active {
+    display: flex;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   margin: 330px 0 50px 0;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer_links li a {
+    color: #636e85;
+    cursor: pointer;
+}
