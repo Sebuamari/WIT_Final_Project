@@ -71,7 +71,8 @@
         max-height: 1000px;
     }
 
-    .login_form_container {
+    .login_form_container,
+    .register_form_container {
         width: 90%;
     }
 

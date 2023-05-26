@@ -3,19 +3,14 @@
     --color-link: #1663dd;
     --color-label: #636e85;
     --color-error: #cc000d;
-    --color-green: rgb(28, 231, 131);
-    --color-gray: rgb(168, 175, 189);
-    --color-white: rgb(255, 255, 255);
-    --color-footer: rgb(246, 247, 248);
-    --color-white-6: rgba(255, 255, 255, 0.6);
-    --color-white-4: rgba(255, 255, 255, 0.4);
-    --color-background-black: rgb(11, 12, 15);
+    --color-white: #FFFFFF;
     --font: 'Montserrat', sans-serif;
-    --letter-spacing-6: 0.6px;
-    --button-border-radius: 4px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color-background-login);
     font-family: var(--font);
 }
@@ -25,6 +20,7 @@ header {
     padding: 0 40px;
     height: 64px;
     display: flex;
+    box-shadow: 0 1px 0 0 #f0f1f5;
     align-items: center;
 }
 
@@ -33,7 +29,8 @@ header img {
     width: auto;
 }
 
-.login_form_container { 
+.login_form_container,
+.register_form_container { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +42,11 @@ header img {
     box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.08);
 }
 
+.register_form_container {
+    margin-top: 0;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+}
+
 .login_form_container h2 {
     margin-bottom: 16px;
     font-size: 24px;
@@ -53,16 +55,46 @@ header img {
     line-height: 29px;
 }
 
-.login_form_container p {
+.login_form_container p,
+.register_form_container p {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     color: #636e85;
+    text-align: center;
     margin: 16px 0 32px;
 }
 
-.login_form_container p a {
+.login_form_container p a,
+.register_form_container p a {
     color: var(--color-link);
+}
+
+.register_header_h2 {
+    color: #040405;
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: -0.03125rem;
+    margin: 0;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.register_header_h4 {
+    font-size: 0.875rem;
+    padding: 0 30px;
+    color: var(--color-label);
+    font-size: 0.8125rem;
+    font-weight: normal;
+    line-height: 1.3125rem;
+    margin-top: 10px;
+    padding: 0 25px;
+    white-space: normal;
+    max-width: 525px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 form label {
@@ -93,13 +125,52 @@ form input.error {
     border-color: var(--color-error);
 }
 
+form .birthdate_selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#gender {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.birthdate_selectors .month select,
+.birthdate_selectors .day select,
+.birthdate_selectors .year select,
+#gender {
+    border-radius: 4px;
+    appearance: none;
+    padding: 10px;
+    height: 3rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 4px;
+    background-image: url("/images/dropdown-arrow.png");
+}
+
+
+.birthdate_selectors .month,
+.birthdate_selectors .day,
+.birthdate_selectors .year {
+    width: 30%;
+}
+
 #error_email,
-#error_password {
+#error_password,
+#error_name,
+#error_day,
+#error_month,
+#error_year,
+#error_gender {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 5px;
-    gap: 10px;
+    gap: 3px;
     font-size: 12px;
     line-height: 18px;
     color: var(--color-error);
@@ -107,10 +178,44 @@ form input.error {
 }
 
 #error_email.active,
-#error_password.active {
+#error_password.active,
+#error_name.active,
+#error_day.active,
+#error_month.active,
+#error_year.active,
+#error_gender.active {
     opacity: 1;
 }
 
+.terms {
+    width: 70%;
+    margin: 35px 10px 25px;
+    padding: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.375rem;
+    color: #636e85;
+}
+
+#continue {
+    cursor: default;
+    background: rgba(39, 44, 53, 0.5);
+    border-color: #dde0e6;
+    color: #b9bfc8;
+    height: 40px;
+    max-width: 400px;
+    width: 100%;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#continue:hover,
 #submit:hover {
     cursor: pointer;
 }
