@@ -89,13 +89,13 @@ form input {
     line-height: 24px;
 }
 
-.form input.error {
+form input.error {
     border-color: var(--color-error);
 }
 
 #error_email,
 #error_password {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 5px;
@@ -103,11 +103,12 @@ form input {
     font-size: 12px;
     line-height: 18px;
     color: var(--color-error);
+    opacity: 0;
 }
 
 #error_email.active,
 #error_password.active {
-    display: flex;
+    opacity: 1;
 }
 
 #submit:hover {

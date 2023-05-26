@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if(currentValue.length > 0 && !currentValue.match(emailRegex)) {
             emailError.classList.add('active');
+            emailInput.classList.add('error');
         } else {
             emailError.classList.remove('active');
+            emailInput.classList.remove('error');
         }
     }
 
@@ -26,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const passwordRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if(currentValue.length > 0 && !currentValue.match(passwordRegex)) {
             passwordError.classList.add('active');
+            passwordInput.classList.add('error');
         } else {
             passwordError.classList.remove('active');
+            passwordInput.classList.remove('error');
         }
     }
 
