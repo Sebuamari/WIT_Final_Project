@@ -68,11 +68,55 @@ document.addEventListener('DOMContentLoaded', function(){
                 return false;
             }
         })();
-        const monthValid = birtMonth.value !== "month" ? true : false;
-        const dayValid = birthDay.value !== "day" ? true : false;
-        const yearValid = birthYear.value !== "year" ? true : false;
+        const monthValid = (function(){
+            if(birtMonth.value !== "month") {
+                monthError.classList.remove('active');
+                birtMonth.classList.remove('error');
+                return true;
+            } else {
+                monthError.innerHTML = errors["month"];
+                monthError.classList.add('active');
+                birtMonth.classList.add('error');
+                return false;
+            }
+        })();
+        const dayValid = (function(){
+            if(birthDay.value !== "day") {
+                dayError.classList.remove('active');
+                birthDay.classList.remove('error');
+                return true;
+            } else {
+                dayError.innerHTML = errors["day"];
+                dayError.classList.add('active');
+                birthDay.classList.add('error');
+                return false;
+            }
+        })();
+        const yearValid = (function(){
+            if(birthYear.value !== "year") {
+                yearError.classList.remove('active');
+                birthYear.classList.remove('error');
+                return true;
+            } else {
+                yearError.innerHTML = errors["year"];
+                yearError.classList.add('active');
+                birthYear.classList.add('error');
+                return false;
+            }
+        })();
         const birthDate = birtMonth.value + "/" + birthDay.value + "/" + birthYear.value;
-        const genderValid = gender.value !== "select" ? true : false;
+        const genderValid = (function(){
+            if(gender.value !== "select") {
+                genderError.classList.remove('active');
+                gender.classList.remove('error');
+                return true;
+            } else {
+                genderError.innerHTML = errors["day"];
+                genderError.classList.add('active');
+                gender.classList.add('error');
+                return false;
+            }
+        })();
         const allDataEntered = emailValid && passwordValid && nameValid && monthValid && dayValid && yearValid && genderValid ? true : false;
 
         if(allDataEntered) {

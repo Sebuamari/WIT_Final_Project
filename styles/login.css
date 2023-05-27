@@ -122,7 +122,8 @@ form input {
     line-height: 24px;
 }
 
-form input.error {
+form input.error,
+form select.error {
     border-color: var(--color-error);
 }
 
