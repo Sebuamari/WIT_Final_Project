@@ -44,10 +44,6 @@ headerItemTwo.addEventListener("click", (e) => {
   innerSectionTwo.classList.remove("hide");
   innerSectionThree.classList.add("hide");
 
-  console.log(document.querySelector(".header_item_one").clientWidth);
-
-  console.log(window.innerWidth)
-
   let slideWidth = window.innerWidth < 900 ? 90 : 110;
   let slideOffset = headerItemOne.classList.contains("active") ? document.querySelector(".header_item_one").clientWidth + 40 : headerItemThree.classList.contains("active") ? -(document.querySelector(".header_item_three").clientWidth + 40) : 0;
   slide.style.transform = `translateX(${slideOffset}px)`;
