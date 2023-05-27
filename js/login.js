@@ -11,42 +11,17 @@ document.addEventListener('DOMContentLoaded', function(){
         "password": "Incorrect password"
     }
 
-    function validateEmail(e) {
-        let currentValue = e.target.value;
-        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        if(currentValue.length > 0 && !currentValue.match(emailRegex)) {
-            emailError.classList.add('active');
-            emailInput.classList.add('error');
-        } else {
-            emailError.classList.remove('active');
-            emailInput.classList.remove('error');
-        }
-    }
-
-    function validatePassword(e) {
-        let currentValue = e.target.value;
-        const passwordRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        if(currentValue.length > 0 && !currentValue.match(passwordRegex)) {
-            passwordError.classList.add('active');
-            passwordInput.classList.add('error');
-        } else {
-            passwordError.classList.remove('active');
-            passwordInput.classList.remove('error');
-        }
-    }
-
-    function validateUser(email, password) {
+    function validateUser(e, email, password) {
+        e.preventDefault();
         const emailFromLocalStorage = window.localStorage.getItem("email");
         const passwordFromLocalStorage = window.localStorage.getItem("password");
 
-        if(emailFromLocalStorage === email.target.value && passwordFromLocalStorage === password.target.value) {
-            console.log("loged in"); 
-        } else if (emailFromLocalStorage !== email.target.value || passwordFromLocalStorage !== password.target.value) {
-            console.log("incorrect")
+        if(emailFromLocalStorage === email.value && passwordFromLocalStorage === password.value) {
+            window.location.href = "/account.html";
+        } else if (emailFromLocalStorage !== email.value || passwordFromLocalStorage !== password.value) {
+            
         }
     }
 
-    emailInput.addEventListener('input', (e) => validateEmail(e));
-    passwordInput.addEventListener('input', (e) => validatePassword(e));
-    submitButton.addEventListener('click', () => validateUser(emailInput, passwordInput, submitButton));
+    submitButton.addEventListener('click', (e) => validateUser(e, emailInput, passwordInput));
 });

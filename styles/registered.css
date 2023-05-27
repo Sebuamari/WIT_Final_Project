@@ -1,0 +1,11 @@
+.congratulations {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
+    text-align: center;
+}
