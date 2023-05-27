@@ -8,9 +8,16 @@
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: var(--color-background-login);
     font-family: var(--font);
 }
@@ -20,9 +27,14 @@ header {
     padding: 0 40px;
     width: 100vw;
     height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    box-shadow: 0 1px 0 0 #f0f1f5;
-    align-items: center;
+    -webkit-box-shadow: 0 1px 0 0 #f0f1f5;
+            box-shadow: 0 1px 0 0 #f0f1f5;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 header img {
@@ -32,20 +44,29 @@ header img {
 
 .login_form_container,
 .register_form_container { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: var(--color-white);
     margin: 0 auto;
     margin-top: 50px;
     width: 450px;
     padding: 40px 48px;
-    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.08);
+            box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.08);
 }
 
 .register_form_container {
     margin-top: 0;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
 }
 
 .login_form_container h2 {
@@ -128,9 +149,16 @@ form select.error {
 }
 
 form .birthdate_selectors {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -144,7 +172,9 @@ form .birthdate_selectors {
 .birthdate_selectors .year select,
 #gender {
     border-radius: 4px;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     padding: 10px;
     height: 3rem;
     width: 100%;
@@ -168,9 +198,16 @@ form .birthdate_selectors {
 #error_month,
 #error_year,
 #error_gender {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 5px;
     gap: 3px;
     font-size: 12px;
@@ -180,9 +217,16 @@ form .birthdate_selectors {
 }
 
 #password_rule {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 5px;
     gap: 3px;
     font-size: 10px;
@@ -234,16 +278,28 @@ form .birthdate_selectors {
 }
 
 footer {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
    margin: 330px 0 50px 0;
 }
 
 .footer_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 20px;
 }
 
