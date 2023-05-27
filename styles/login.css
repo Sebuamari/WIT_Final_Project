@@ -178,6 +178,16 @@ form .birthdate_selectors {
     opacity: 0;
 }
 
+#password_rule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    gap: 3px;
+    font-size: 10px;
+    line-height: 18px;
+}
+
 #error_email.active,
 #error_password.active,
 #error_name.active,
