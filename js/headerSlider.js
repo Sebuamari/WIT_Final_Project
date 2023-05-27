@@ -24,7 +24,7 @@ headerItemOne.addEventListener("click", (e) => {
   innerSectionTwo.classList.add("hide");
   innerSectionThree.classList.add("hide");
 
-  let slideWidth = 83;
+  let slideWidth =  window.innerWidth < 900 ? 70 : 93;
   slide.style.transform = `translateX(0px)`;
   slide.style.width = slideWidth + "px";
 });
@@ -44,8 +44,12 @@ headerItemTwo.addEventListener("click", (e) => {
   innerSectionTwo.classList.remove("hide");
   innerSectionThree.classList.add("hide");
 
-  let slideWidth = 110;
-  let slideOffset = headerItemOne.classList.contains("active") ? 123 : headerItemThree.classList.contains("active") ? -135 : 0;
+  console.log(document.querySelector(".header_item_one").clientWidth);
+
+  console.log(window.innerWidth)
+
+  let slideWidth = window.innerWidth < 900 ? 90 : 110;
+  let slideOffset = headerItemOne.classList.contains("active") ? document.querySelector(".header_item_one").clientWidth + 40 : headerItemThree.classList.contains("active") ? -(document.querySelector(".header_item_three").clientWidth + 40) : 0;
   slide.style.transform = `translateX(${slideOffset}px)`;
   slide.style.width = slideWidth + "px";
 });
@@ -65,8 +69,8 @@ headerItemThree.addEventListener("click", (e) => {
   innerSectionTwo.classList.add("hide");
   innerSectionThree.classList.remove("hide");
 
-  let slideWidth = 110;
-  let slideOffset = headerItemOne.classList.contains("active") ? 275 : headerItemThree.classList.contains("active") ? 140 : 0;
+  let slideWidth = window.innerWidth < 900 ? 90 : 110;
+  let slideOffset = headerItemOne.classList.contains("active") ? document.querySelector(".header_item_one").clientWidth + document.querySelector(".header_item_two").clientWidth + 80 : headerItemThree.classList.contains("active") ? document.querySelector(".header_item_two").clientWidth : 0;
   slide.style.transform = `translateX(${slideOffset}px)`;
   slide.style.width = slideWidth + "px";
 });

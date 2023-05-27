@@ -134,6 +134,41 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
     }
+
+    #recommendations {
+        padding: 90px 20px;
+    }
+
+    .inner_top img {
+        width: 80%;
+        height: auto;
+    }
+
+    .inner_header ul li {
+        font-size: 10px;
+    }
+
+    .inner_header,
+    #about_hulu .inner_section {
+        left: 5%;
+        max-width: 90%;
+    }
+
+    #plans {
+        text-align: center;
+    }
+
+    .bundle_save_choice img,
+    .white_button,
+    .trio_basic img, 
+    .trio_premium img, 
+    .hulu_live img {
+        width: 100% !important;
+    }
+
+    .white_button {
+        height: 80px !important;
+    }
 }
 
 @media (max-width: 1200px) {
