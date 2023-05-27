@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function(){
             localStorage.setItem("birthdate", birthDate);
             localStorage.setItem("gender", gender.value);
 
-            window.location.href = "/registered.html";
+            window.location.href = "registered.html";
         }
     }
 

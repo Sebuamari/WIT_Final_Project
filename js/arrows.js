@@ -12,7 +12,7 @@ const aboutUsLinks = document.querySelector(".about_us_links");
 
 addsOnButton.addEventListener("click", function() {
     addsOn.classList.toggle("shown");
-    addsOnButton.querySelector(".arrow").classList.toggle("transformed");
+    document.querySelector('.adds_on_button').innerHTML = addsOn.classList.contains("shown") ? `Hide Add-ons<i class="arrow transformed fa-solid fa-angle-down fa-2xl" style="color: #ffffff;"></i>` : `Show Add-ons<i class="arrow fa-solid fa-angle-down fa-2xl" style="color: #ffffff;"></i>`;
 });
 
 browse.addEventListener("click", function() {

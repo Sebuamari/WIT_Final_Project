@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const passwordFromLocalStorage = window.localStorage.getItem("password");
 
         if(emailFromLocalStorage === email.value && passwordFromLocalStorage === password.value) {
-            window.location.href = "/account.html";
+            window.location.href = "account.html";
         } else if (emailFromLocalStorage !== email.value || passwordFromLocalStorage !== password.value) {
             
         }
