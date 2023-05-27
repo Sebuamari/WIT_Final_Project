@@ -18,8 +18,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if(emailFromLocalStorage === email.value && passwordFromLocalStorage === password.value) {
             window.location.href = "account.html";
-        } else if (emailFromLocalStorage !== email.value || passwordFromLocalStorage !== password.value) {
-            
+        } else if (emailFromLocalStorage !== email.value && passwordFromLocalStorage !== password.value) {
+            emailError.innerHTML = errors["emailNotValid"];
+            passwordError.innerHTML = errors["password"];
+            emailInput.classList.add("error");
+            emailError.classList.add("active");
+            passwordError.classList.add("active");
+            passwordInput.classList.add("error");
+        } else if (emailFromLocalStorage !== email.value) {
+            emailError.innerHTML = errors["emailNotValid"];
+            emailError.classList.add("active");
+            emailInput.classList.add("error");
+        } else if (passwordFromLocalStorage !== password.value) {
+            passwordError.innerHTML = errors["password"];
+            passwordError.classList.add("active");
+            passwordInput.classList.add("error");
         }
     }
 
