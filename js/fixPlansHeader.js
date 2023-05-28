@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let rect = plansHeader.getBoundingClientRect();
 
     if (rect.top <= 0 ) {
-      plansHeader.classList.add("fixed");
       if (document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top < 50 || document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top > 1250 ) {
-        plansHeader.classList.remove("fixed");
+        plansHeader.classList.contains("fixed") ? plansHeader.classList.remove("fixed") : "";
+      } else {
+        !plansHeader.classList.contains("fixed") ? plansHeader.classList.add("fixed") : "";
       }
     } else if (document.querySelector("#plans").getBoundingClientRect().top > 0 && document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top < 330) {
-      plansHeader.classList.remove("fixed");
+      plansHeader.classList.contains("fixed") ? plansHeader.classList.remove("fixed") : "";
     }
   });
 })
