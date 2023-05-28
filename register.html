@@ -31,18 +31,18 @@
         <h4 class="register_header_h4">Use your email and password to watch on your favorite devices.</h4>
         <div class="register_form_container">
             <p>You will use this email and password to log into your accounts for all your favorite services across The Walt Disney Family of Companies, including Disney+, Hulu and ESPN+. <a href="/">Learn More</a></p>
-            <form action="">
+            <form action="/action_page.php" method="get">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email">
                 <span id="error_email"><i class="fa-solid fa-circle-exclamation" style="color: #cc000d;"></i>error</span>
-                <label for="passwosrd">Password</label>
+                <label for="password">Password</label>
                 <input type="password" id="password" name="password">
                 <span id="password_rule"><i class="fa-solid fa-circle-exclamation"></i> At least one alphabetic character, At least one digit, Minimum length of 8 characters.</span>
                 <span id="error_password"><i class="fa-solid fa-circle-exclamation" style="color: #cc000d;"></i>error</span>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name">
                 <span id="error_name"><i class="fa-solid fa-circle-exclamation" style="color: #cc000d;"></i>error</span>
-                <label for="birthdate">Birthdate</label>
+                <p class="birthdate_label">Birthdate</p>
                 <div class="birthdate_selectors" id="birthdate">
                     <div class="month">
                         <select name="month" id="month">
