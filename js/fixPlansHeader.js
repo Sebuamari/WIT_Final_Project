@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (rect.top <= 0 ) {
       if (document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top < 50 || document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top > 1250 ) {
         plansHeader.classList.contains("fixed") ? plansHeader.classList.remove("fixed") : "";
-      } else {
+        console.log("Dde")
+      } else if (document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top > 400 && document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top < 1250 ) {
         !plansHeader.classList.contains("fixed") ? plansHeader.classList.add("fixed") : "";
+        console.log("Ddwwe")
       }
     } else if (document.querySelector("#plans").getBoundingClientRect().top > 0 && document.querySelector(".plans_footer_paragraph").getBoundingClientRect().top < 330) {
       plansHeader.classList.contains("fixed") ? plansHeader.classList.remove("fixed") : "";
