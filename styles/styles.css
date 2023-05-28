@@ -1086,6 +1086,7 @@ header a:hover,
   position: absolute;
   content: "";
   height: 32px;
+  left: 0;
   width: 32px;
   bottom: -1px;
   background-color: var(--color-white);

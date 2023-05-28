@@ -105,6 +105,24 @@
     #continue {
         width: 90%;
     }
+
+    .bundle_plans table tr td {
+        padding: 30px 2px;
+        font-size: 8px;
+    }
+
+    .bundle_plans table tr td p {
+        padding: 30px 0;
+        font-size: 10px !important;
+    }
+
+    .crossed_text {
+        font-size: 8px !important;
+    }
+
+    .plans_header .td_header {
+        font-size: 10px !important;
+    }
 }
 
 @media (max-width: 800px) {
